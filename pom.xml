@@ -11,6 +11,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>Demo-Maven</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 	<name>Demo-Maven</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -39,6 +40,23 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
+    
+    <repositories>
+         <repository>
+            <id>myMavenRepo.read</id>
+            <url>https://mymavenrepo.com/repo/BpNWVHBn6h8abnFGyFcQ/</url>
+         </repository>
+       </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>myMavenRepo.write</id>
+            <url>https://mymavenrepo.com/repo/3DNVRmmW2acZn7FRPrBi/</url>
+        </repository>
+    </distributionManagement>
+
+
 
 	<build>
 		<plugins>
