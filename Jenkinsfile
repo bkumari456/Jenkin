@@ -6,7 +6,7 @@ pipeline {
 
             steps {
                 withMaven(maven : 'maven_3_6_0') {
-                    sh 'mvn clean compile'
+                    sh 'mvn clean install'
                 }
             }
         }
@@ -15,7 +15,7 @@ pipeline {
 
             steps {
                 withMaven(maven : 'maven_3_6_0') {
-                    sh 'mvn test'
+                   // sh 'mvn test'
                 }
             }
         }
@@ -24,7 +24,7 @@ pipeline {
         stage ('Deployment Stage') {
             steps {
                 withMaven(maven : 'maven_3_6_0') {
-                    sh 'mvn deploy'
+                  //  sh 'mvn deploy'
                 }
             }
         }
